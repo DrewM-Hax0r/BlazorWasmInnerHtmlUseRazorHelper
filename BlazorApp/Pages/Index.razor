@@ -1,14 +1,15 @@
 ﻿@page "/"
 
-<h2>Test using just the razor helper</h2>
+<h2>Test using just the razor helper - content renders as expected</h2>
 <div>
     @{RenderContent();}
 </div>
 
-<h2>Test using inner HTML inside components</h2>
+<h2>Test using inner HTML inside components - renders correctly when not using razor helper</h2>
 <TestComponent>
     <div>Render directly in inner HTML</div>
 </TestComponent>
+<h2>Test using inner HTML inside components - does not render when using razor helper</h2>
 <TestComponent>
     @{RenderContent();}
 </TestComponent>
