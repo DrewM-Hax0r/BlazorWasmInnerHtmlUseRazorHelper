@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<h2>Test using just the razor helper</h2>
+<div>
+    @{RenderContent();}
+</div>
+
+<h2>Test using inner HTML inside components</h2>
+<TestComponent>
+    <div>Render directly in inner HTML</div>
+</TestComponent>
+<TestComponent>
+    @{RenderContent();}
+</TestComponent>
+
+@{
+    void RenderContent()
+    {
+        <div>Render from inside helper method</div>
+    }
+}
